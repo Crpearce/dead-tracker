@@ -11,6 +11,8 @@ const ConcertForm = () => {
         allShows.push({showDate, showCity})
         console.log(allShows)
     }
+// need to change logic to incorporate the setAllShows setter function in the create show function above
+
 
   return (
     <div>
