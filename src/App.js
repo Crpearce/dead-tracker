@@ -1,9 +1,13 @@
-import './App.css';
+import Navigation from './components/navigation/navigation.component'
+import ConcertForm from './components/concertForm/concertForm.component';
 
-function App() {
+import './App.css'
+
+const App = () =>  {
   return (
     <div className="App">
-      <h1>App</h1>
+      <Navigation />
+      <ConcertForm />
     </div>
   );
 }
