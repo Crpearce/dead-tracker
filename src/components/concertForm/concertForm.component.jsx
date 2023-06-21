@@ -47,7 +47,7 @@ const ConcertForm = () => {
         </select>
         <button onClick={displayShow}>View Show</button>
       </div>
-      <Concert selectedShows={showCity} />
+      <Concert selectedShows={showCity} locations={locations}/>
     </>
   )
 }
