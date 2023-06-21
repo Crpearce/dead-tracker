@@ -1,30 +1,54 @@
-import './concertForm.styles.css'
-import { locations } from '../../data'
 import { useState } from 'react'
 
+import Concert from '../concert/concert.component'
+
+import { locations } from '../../data'
+
+import './concertForm.styles.css'
+
 const ConcertForm = () => {
-    const [allShows, setAllShows] = useState([])
-    const [showDate, setShowDate] = useState('')
-    const [showCity, setShowCity] = useState('')
+  const [allShows, setAllShows] = useState([
+    'Inglewood, CA',
+    'Phoenix, AZ',
+    'Dallas, TX',
+    'Atlanta, GA',
+    'Charlotte, NC',
+    'Raleigh, NC',
+    'Bristow, VA',
+    'Burgettstown, PA',
+    'Maryland Heights, MO',
+    'Chicago, IL',
+    'Cincinnati, OH',
+    'Philadelphia, PA',
+    'Saratoga, NY',
+  ])
+  const [showCity, setShowCity] = useState('')
 
-    const createShow = () => {
-        allShows.push({showDate, showCity})
-        console.log(allShows)
-    }
-// need to change logic to incorporate the setAllShows setter function in the create show function above
-
+  const displayShow = () => {
+    const updateShows = []
+    locations.forEach((show) => {
+      if (show.venue === showCity && !updateShows.includes(showCity)) {
+        updateShows.push(show.venue)
+      }
+      setShowCity(updateShows)
+    })
+  }
 
   return (
-    <div>
-      <label>
-        Concert Date:
-        <input type='date' onChange={(e) => setShowDate(e.target.value)}/>
-      </label>
-      <select name='City' onChange={(e) => setShowCity(e.target.value)}>
-      <option value="⬇️ Select a city ⬇️"> -- Select a City -- </option>
-        {locations.map((location) => <option key={location.id} value={location.venue}>{location.venue}</option>)}</select>
-        <button onClick={createShow}>Add show</button>
-    </div>
+    <>
+      <div>
+        <select name='City' onChange={(e) => setShowCity(e.target.value)}>
+          <option value='⬇️ Select a city ⬇️'> -- Select a City -- </option>
+          {allShows.map((location) => (
+            <option key={location} value={location}>
+              {location}
+            </option>
+          ))}
+        </select>
+        <button onClick={displayShow}>View Show</button>
+      </div>
+      <Concert selectedShows={showCity} />
+    </>
   )
 }
 
