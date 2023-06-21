@@ -2,9 +2,9 @@ import { useState } from 'react'
 
 import Concert from '../concert/concert.component'
 
-import { locations } from '../../data'
-
 import './concertForm.styles.css'
+
+import { locations } from '../../data'
 
 const ConcertForm = () => {
   const [allShows] = useState([

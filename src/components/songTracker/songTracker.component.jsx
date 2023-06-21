@@ -1,4 +1,4 @@
-import React from 'react'
+import './songTracker.styles.css'
 
 const SongTracker = () => {
   return (

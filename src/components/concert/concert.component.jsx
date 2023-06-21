@@ -3,10 +3,6 @@ import './concert.styles.css'
 const Concert = ({ selectedShows, locations }) => {
   const findSets = locations.filter((show) => show.venue === selectedShows[0])
 
-  console.log(findSets)
-
-  console.log(selectedShows)
-
   return (
     <div className='concert-container'>
       {findSets.map((set) => {
