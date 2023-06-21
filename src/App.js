@@ -1,14 +1,19 @@
 import Navigation from './components/navigation/navigation.component'
 import ConcertForm from './components/concertForm/concertForm.component';
 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+
 import './App.css'
 
 const App = () =>  {
   return (
-    <div className="App">
+    <Router>
       <Navigation />
-      <ConcertForm />
-    </div>
+      <Routes>
+        <Route path='/' element={<ConcertForm />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -36,7 +36,7 @@ const ConcertForm = () => {
 
   return (
     <>
-      <div>
+      <div className='concert-form-container'>
         <select name='City' onChange={(e) => setShowCity(e.target.value)}>
           <option value='⬇️ Select a city ⬇️'> -- Select a City -- </option>
           {allShows.map((location) => (
