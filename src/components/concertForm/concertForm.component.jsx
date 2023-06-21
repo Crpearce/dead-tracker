@@ -7,7 +7,7 @@ import { locations } from '../../data'
 import './concertForm.styles.css'
 
 const ConcertForm = () => {
-  const [allShows, setAllShows] = useState([
+  const [allShows] = useState([
     'Inglewood, CA',
     'Phoenix, AZ',
     'Dallas, TX',
