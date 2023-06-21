@@ -1,7 +1,8 @@
 import './concert.styles.css'
+import { concerts } from '../../data'
 
-const Concert = ({ selectedShows, locations }) => {
-  const findSets = locations.filter((show) => show.venue === selectedShows[0])
+const Concert = ({ selectedShows }) => {
+  const findSets = concerts.filter((show) => show.venue === selectedShows[0])
 
   return (
     <div className='concert-container'>

@@ -4,7 +4,7 @@ import Concert from '../concert/concert.component'
 
 import './concertForm.styles.css'
 
-import { locations } from '../../data'
+import { concerts } from '../../data'
 
 const ConcertForm = () => {
   const [allShows] = useState([
@@ -26,7 +26,7 @@ const ConcertForm = () => {
 
   const displayShow = () => {
     const updateShows = []
-    locations.forEach((show) => {
+    concerts.forEach((show) => {
       if (show.venue === showCity && !updateShows.includes(showCity)) {
         updateShows.push(show.venue)
       }
@@ -47,7 +47,7 @@ const ConcertForm = () => {
         </select>
         <button onClick={displayShow}>View Show</button>
       </div>
-      <Concert selectedShows={showCity} locations={locations} />
+      <Concert selectedShows={showCity} />
     </>
   )
 }

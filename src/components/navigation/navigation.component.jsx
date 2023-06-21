@@ -12,7 +12,7 @@ const Navigation = () => {
       </Link>
       <div>
         <Link to='/song-tracker'>
-          <SongTracker />
+          <h3>Song Tracker</h3>
         </Link>
       </div>
     </nav>
