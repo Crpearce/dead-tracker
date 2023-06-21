@@ -8,14 +8,25 @@ const Concert = ({ selectedShows, locations }) => {
   console.log(selectedShows)
 
   return (
-    <div>
-      <h2>{selectedShows}</h2>
+    <div className='concert-container'>
       {findSets.map((set) => {
         return (
           <div>
-            <h3>{set.date}</h3>
-            <p>{set.set1}</p>
-            <p>{set.set2}</p>
+            <h2>
+              {selectedShows} - {set.date}
+            </h2>
+            <h3>Set 1</h3>
+            <ul>
+              {set.set1.map((song) => {
+                return <li>{song}</li>
+              })}
+            </ul>
+            <h3>Set 2</h3>
+            <ul>
+              {set.set2.map((song) => {
+                return <li>{song}</li>
+              })}
+            </ul>
           </div>
         )
       })}
