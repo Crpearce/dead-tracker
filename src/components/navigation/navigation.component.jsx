@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
 
-import SongTracker from '../songTracker/songTracker.component'
-
 import './navigation.styles.css'
 
 const Navigation = () => {
