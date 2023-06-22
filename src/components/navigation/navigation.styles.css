@@ -1,3 +1,7 @@
+.nav-container {
+    background-color: #eeede1;
+}
+
 .nav-links-container {
     display: flex;
     flex-direction: row;

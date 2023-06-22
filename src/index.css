@@ -6,6 +6,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #171515;
+  /*
+  #0C2999 -- blue
+  #FF1C14 -- red
+  #171515 -- black 
+  */
 }
 
 code {
