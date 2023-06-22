@@ -4,13 +4,13 @@ import './navigation.styles.css'
 
 const Navigation = () => {
   return (
-    <nav>
-      <Link to='/'>
-        <h1>2023 Dead Tour Recap</h1>
+    <nav className='nav-container'>
+        <h1>2023 Dead Tour Tracker</h1>
+      <div className='nav-links-container'>
+      <Link to='/'>Home
       </Link>
-      <div>
         <Link to='/song-tracker'>
-          <h3>Song Tracker</h3>
+          Song Tracker
         </Link>
       </div>
     </nav>
