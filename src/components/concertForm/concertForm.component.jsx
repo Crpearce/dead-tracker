@@ -7,25 +7,25 @@ import './concertForm.styles.css'
 import { concerts, cities } from '../../data'
 
 const ConcertForm = () => {
-  const [allShows] = useState(cities)
-  const [showCity, setShowCity] = useState('')
+  const [allConcerts] = useState(cities)
+  const [concertCity, setConcertCity] = useState('')
 
   const displayShow = () => {
-    const updateShows = []
-    concerts.forEach((show) => {
-      if (show.venue === showCity && !updateShows.includes(showCity)) {
-        updateShows.push(show.venue)
+    const concertsList = []
+    concerts.forEach((concert) => {
+      if (concert.venue === concertCity) {
+        concertsList.push(concert.venue)
       }
-      setShowCity(updateShows)
+      setConcertCity(concertsList)
     })
   }
 
   return (
     <>
       <div className='concert-form-container'>
-        <select name='City' onChange={(e) => setShowCity(e.target.value)}>
+        <select name='City' onChange={(e) => setConcertCity(e.target.value)}>
           <option value='⬇️ Select a city ⬇️'> -- Select a City -- </option>
-          {allShows.map((location) => (
+          {allConcerts.map((location) => (
             <option key={location} value={location}>
               {location}
             </option>
@@ -33,7 +33,7 @@ const ConcertForm = () => {
         </select>
         <button onClick={displayShow}>View Show</button>
       </div>
-      <Concert selectedShows={showCity} />
+      <Concert selectedShows={concertCity} />
     </>
   )
 }
