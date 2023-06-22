@@ -1,36 +1,43 @@
-import './songTracker.styles.css'
+import React, { useState } from 'react';
+import './songTracker.styles.css';
 
-import { concerts } from '../../data'
+const SongTracker = ({ songCount }) => {
+  const [selectedSong, setSelectedSong] = useState(null);
 
-const SongTracker = () => {
+  const handleSongClick = (song) => {
+    if (selectedSong === song) {
+      setSelectedSong(null);
+    } else {
+      setSelectedSong(song);
+    }
+  };
 
-  // iterate over each concert, spread both set1 and set 2 together?  Each song needs to be paired with the concert date,
-  // the song will be the key here, as each time it is played, we will add the new date played into the acc
-  // [{title: 'truckin', dates: ['6/22/21', ]}]
-  const songCount = concerts.reduce((acc, curr) => {
-      curr.set1.forEach(song => {
-        if(!acc[song]) {
-          acc[song] = []
-        } 
-        acc[song].push(curr.date)
-      })
-      curr.set2.forEach(song => {
-        if(!acc[song]) {
-          acc[song] =[]
-        }
-        acc[song].push(curr.date)
-      })
-      console.log(acc)
-      return acc
-      
-  }, [])
+  const handleDateClick = (event) => {
+    event.stopPropagation();
+    // Handle date click if needed
+  };
 
   return (
     <div>
-      <h1>songs</h1>
-      {/* <p>{songCount}</p> */}
+      <h1>Songs</h1>
+      {Object.entries(songCount).map(([song, dates]) => (
+        <div key={song}>
+          <h3 onClick={() => handleSongClick(song)}>
+            {song} ({dates.length})
+          </h3>
+          {selectedSong === song && (
+            <ul>
+              {dates.map((date, index) => (
+                <li key={index} onClick={handleDateClick}>
+                  {date}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default SongTracker
+export default SongTracker;

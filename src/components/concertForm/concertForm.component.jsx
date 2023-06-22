@@ -1,30 +1,26 @@
-import { useState } from 'react'
-
-import Concert from '../concert/concert.component'
-
-import './concertForm.styles.css'
-
-import { concerts, cities } from '../../data'
+import React, { useState } from 'react';
+import Concert from '../concert/concert.component';
+import './concertForm.styles.css';
+import { concerts, cities } from '../../data';
 
 const ConcertForm = () => {
-  const [allConcerts] = useState(cities)
-  const [concertCity, setConcertCity] = useState('')
+  const [allConcerts] = useState(cities);
+  const [concertCity, setConcertCity] = useState('');
+  const [selectedShow, setSelectedShow] = useState(null);
 
   const displayShow = () => {
-    const concertsList = []
-    concerts.forEach((concert) => {
-      if (concert.venue === concertCity) {
-        concertsList.push(concert.venue)
-      }
-      setConcertCity(concertsList)
-    })
-  }
+    setSelectedShow(concertCity);
+  };
 
   return (
     <>
       <div className='concert-form-container'>
-        <select name='City' onChange={(e) => setConcertCity(e.target.value)}>
-          <option value='⬇️ Select a city ⬇️'> -- Select a City -- </option>
+        <select
+          name='City'
+          value={concertCity}
+          onChange={(e) => setConcertCity(e.target.value)}
+        >
+          <option value=''> -- Select a City -- </option>
           {allConcerts.map((location) => (
             <option key={location} value={location}>
               {location}
@@ -33,9 +29,9 @@ const ConcertForm = () => {
         </select>
         <button onClick={displayShow}>View Show</button>
       </div>
-      <Concert selectedShows={concertCity} />
+      {selectedShow && <Concert selectedShows={[selectedShow]} />} {/* Wrap selectedShow in an array */}
     </>
-  )
-}
+  );
+};
 
-export default ConcertForm
+export default ConcertForm;
