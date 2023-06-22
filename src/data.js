@@ -16,7 +16,6 @@ export const concerts = [
     {id: 14, venue: 'Saratoga, NY', date:'06/17/2023', set1: ['Let the Good Times Roll', 'Scarlet Begonias', 'Deal', 'Black-throated Wind', 'Dire Wolf', 'Bird Song', 'GDTRFB'], set2: ['They Love Each Other', 'Terrapin Station', 'Hes Gone', 'The Other One', 'Drums', 'Space', 'The Other One', 'Days Between', 'Turn On Your Love Light'], encore:['One More Saturday Night'], region: 'Northeast' },
     {id: 15, venue: 'Saratoga, NY', date:'06/18/2023', set1: ['Hell in a Bucket', 'Sugaree', 'Mississippi 1/2 Step', 'Mr.Charlie', 'Friend of the Devil', 'Lost Sailor', 'Saint of Circumstance', 'Big Railroad Blues'], set2: ['Samson and Delilah', 'Playing in the Band','Help on the Way', 'Slipknot!', 'Franklins Tower', 'Drums', 'Space', 'Death Dont Have No Mercy', 'Throwing Stones', 'Sugar Magnolia' ], encore:['Werewolves of London', 'Playing in the Band Reprise'], region: 'Northeast' },
     {id: 16, venue: 'New York City, NY', date:'06/22/2023', set1: ['Shakedown Street', 'Bertha', 'Ramble on Rose', 'It Hurts Me Too', 'Dancing in the Street', 'Althea', 'Let it Grow'], set2: ['China Cat Sunflower', 'I Know You Rider', 'St.Stephen', 'Uncle Johns Band', 'Drums', 'Space', 'The Eleven', 'Stella Blue', 'U.S. Blues'], encore:['Black Muddy River'], region: 'Northeast' },
-
     // {id: 13, venue: 'New York, NY'},
     // {id: 14, venue: 'Boston, MA'},
     // {id: 15, venue: 'Noblesville, IN'},
