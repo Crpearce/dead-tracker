@@ -24,3 +24,20 @@ export const concerts = [
     // {id: 17, venue: 'George, WA'},
     // {id: 18, venue: 'San Francisco, CA'}
 ]
+
+export const cities = [
+    'Inglewood, CA',
+    'Phoenix, AZ',
+    'Dallas, TX',
+    'Atlanta, GA',
+    'Charlotte, NC',
+    'Raleigh, NC',
+    'Bristow, VA',
+    'Burgettstown, PA',
+    'Maryland Heights, MO',
+    'Chicago, IL',
+    'Cincinnati, OH',
+    'Philadelphia, PA',
+    'Saratoga, NY',
+    'New York, NY'
+]

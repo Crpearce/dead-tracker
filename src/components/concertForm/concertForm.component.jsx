@@ -4,24 +4,10 @@ import Concert from '../concert/concert.component'
 
 import './concertForm.styles.css'
 
-import { concerts } from '../../data'
+import { concerts, cities } from '../../data'
 
 const ConcertForm = () => {
-  const [allShows] = useState([
-    'Inglewood, CA',
-    'Phoenix, AZ',
-    'Dallas, TX',
-    'Atlanta, GA',
-    'Charlotte, NC',
-    'Raleigh, NC',
-    'Bristow, VA',
-    'Burgettstown, PA',
-    'Maryland Heights, MO',
-    'Chicago, IL',
-    'Cincinnati, OH',
-    'Philadelphia, PA',
-    'Saratoga, NY',
-  ])
+  const [allShows] = useState(cities)
   const [showCity, setShowCity] = useState('')
 
   const displayShow = () => {
