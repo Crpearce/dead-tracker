@@ -12,7 +12,7 @@ const App = () => {
       if (!acc[song]) {
         acc[song] = []
       }
-      acc[song].push(curr.date)
+      acc[song].push(`${curr.date}:  ${curr.venue}`)
     })
 
     return acc

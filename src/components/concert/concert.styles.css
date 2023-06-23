@@ -7,22 +7,31 @@
 
 .concert-card {
   width: 50dvw;
+  margin-top: 20px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 5px;
   border-radius: 5px;
-  color: white;
+  color: #171515;
 }
 
-.set-container {
+.set1-wrapper {
     display: flex;
     justify-content: space-around;
+    background-color: #ABAAA2;
+    padding-top: 20px;
+}
+
+.set2-wrapper {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ABAAA2;
 }
 
 .set1-container,
 .set2-container {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  list-style-type:decimal;
+  margin: 10px;
+  width: 35%;
 }
 
 .set-header {
@@ -30,18 +39,26 @@
     flex-direction: column;
     justify-content: center;
     margin:0;
+    color:#171515
 }
 
 .set1-container li,
 .set2-container li {
-  margin: 5px;
-  padding: 5px;
+  padding: 5px 25px 5px 10px;
+  color: white;
 }
 
 .set1-container {
+  border-radius: 5px;
   background-color: #0c2999;
+  margin-bottom: 5vh;
 }
 
 .set2-container {
+  border-radius: 5px;
   background-color: #ff1c14;
+  margin-bottom: 5vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  /* grid-gap: 10px; Gap between grid items */
 }

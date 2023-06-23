@@ -17,6 +17,8 @@ const SongTracker = ({ songCount }) => {
     // Handle date click if needed
   };
 
+  console.log(songCount)
+
   return (
     <div>
       <h1>Songs</h1>
