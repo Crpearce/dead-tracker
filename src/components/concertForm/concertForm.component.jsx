@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Concert from '../concert/concert.component';
 import './concertForm.styles.css';
-import { concerts, cities } from '../../data';
+import { cities } from '../../data';
 
 const ConcertForm = () => {
   const [allConcerts] = useState(cities);
@@ -29,7 +29,7 @@ const ConcertForm = () => {
         </select>
         <button onClick={displayShow}>View Show</button>
       </div>
-      {selectedShow && <Concert selectedShows={[selectedShow]} />} {/* Wrap selectedShow in an array */}
+      {selectedShow && <Concert selectedShows={[selectedShow]} />}
     </>
   );
 };

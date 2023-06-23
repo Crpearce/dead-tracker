@@ -1,15 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-
 import Navigation from './components/navigation/navigation.component'
 import ConcertForm from './components/concertForm/concertForm.component'
 import SongTracker from './components/songTracker/songTracker.component'
-
+import ConcertProjection from './components/concertProjection/concertProjection.component'
 import { concerts } from '../src/data'
 
 const App = () => {
   const songCount = concerts.reduce((acc, curr) => {
     const songs = [...new Set([...curr.set1, ...curr.set2])]
-
     songs.forEach((song) => {
       if (!acc[song]) {
         acc[song] = []
@@ -50,7 +48,15 @@ const App = () => {
     <Router>
       <Navigation />
       <Routes>
-        <Route path='/' element={<ConcertForm />} />
+        <Route
+          path='/'
+          element={
+            <div>
+              <ConcertForm />
+              <ConcertProjection concerts={concerts}/>
+            </div>
+          }
+        />
         <Route
           path='/song-tracker'
           element={<SongTracker songCount={sortedSongCount} />}
