@@ -7,14 +7,16 @@ import { concerts } from '../src/data'
 
 const App = () => {
   const songCount = concerts.reduce((acc, curr) => {
-    const songs = [...new Set([...curr.set1, ...curr.set2])]
+    const songs = [...new Set([...curr.set1, ...curr.set2, ...curr.encore])]
     songs.forEach((song) => {
+      if (song === 'None') {
+        return
+      }
       if (!acc[song]) {
         acc[song] = []
       }
-      acc[song].push(`${curr.date}:  ${curr.venue}`)
+      acc[song].push(`${curr.date}: ${curr.venue}`)
     })
-
     return acc
   }, {})
 

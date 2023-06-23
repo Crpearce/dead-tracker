@@ -1,64 +1,72 @@
 .concert-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #eeede1;
-}
-
-.concert-card {
-  width: 50dvw;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 5px;
-  border-radius: 5px;
-  color: #171515;
-}
-
-.set1-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eeede1;
+  }
+  
+  .concert-card {
+    width: 50vw;
+    margin-top: 20px;
+    margin-bottom: 5vh;
+    padding: 5px;
+    border-radius: 5px;
+    color: #171515;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+  
+  .set1-wrapper {
     display: flex;
     justify-content: space-around;
-    background-color: #ABAAA2;
-    padding-top: 20px;
-}
-
-.set2-wrapper {
+    margin:10px;
+    border-radius: 5px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;  }
+  
+  .set2-wrapper {
     display: flex;
     justify-content: space-around;
-    background-color: #ABAAA2;
-}
-
-.set1-container,
-.set2-container {
-  list-style-type:decimal;
-  margin: 10px;
-  width: 35%;
-}
-
-.set-header {
+    margin:10px;
+    border-radius: 5px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+  
+  .set1-container,
+  .set2-container {
+    list-style-type: decimal;
+    margin: 10px;
+    width: 45%;
+  }
+  
+  .set-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin:0;
-    color:#171515
-}
+    margin: 0;
+    color: #171515;
+  }
+  
+  .set1-container li,
+  .set2-container li {
+      color: white;
+    }
 
-.set1-container li,
-.set2-container li {
-  padding: 5px 25px 5px 10px;
-  color: white;
-}
+    .set1-container li {
+        padding: 5px 0px;
+    }
 
-.set1-container {
-  border-radius: 5px;
-  background-color: #0c2999;
-  margin-bottom: 5vh;
-}
-
-.set2-container {
-  border-radius: 5px;
-  background-color: #ff1c14;
-  margin-bottom: 5vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
-  /* grid-gap: 10px; Gap between grid items */
-}
+    .set2-container li {
+        padding: 5px 35px 10px 15px;
+    }
+    
+    .set1-container {
+        border-radius: 5px;
+        background-color: #0c2999;
+    }
+    
+    .set2-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 5px;
+        background-color: #ff1c14;
+  }
+  
