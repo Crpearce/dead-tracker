@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
-import Concert from '../concert/concert.component';
-import './concertForm.styles.css';
-import { cities } from '../../data';
+import React, { useState } from 'react'
+
+import Concert from '../concert/concert.component'
+
+import './concertForm.styles.css'
+
+import { cities } from '../../data'
 
 const ConcertForm = () => {
-  const [allConcerts] = useState(cities);
-  const [concertCity, setConcertCity] = useState('');
-  const [selectedShow, setSelectedShow] = useState(null);
+  const [allConcerts] = useState(cities)
+  const [concertCity, setConcertCity] = useState('')
+  const [selectedShow, setSelectedShow] = useState(null)
 
   const displayShow = () => {
-    setSelectedShow(concertCity);
-  };
+    setSelectedShow(concertCity)
+  }
 
   return (
     <>
@@ -31,7 +34,7 @@ const ConcertForm = () => {
       </div>
       {selectedShow && <Concert selectedShows={[selectedShow]} />}
     </>
-  );
-};
+  )
+}
 
-export default ConcertForm;
+export default ConcertForm

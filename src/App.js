@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 import Navigation from './components/navigation/navigation.component'
 import ConcertForm from './components/concertForm/concertForm.component'
 import SongTracker from './components/songTracker/songTracker.component'
-import ConcertProjection from './components/concertProjection/concertProjection.component'
+import SongProjections from './components/songProjections/songProjections.component'
+
 import { concerts } from '../src/data'
 
 const App = () => {
@@ -40,7 +42,6 @@ const App = () => {
         return 0
       }
     )
-
     return Object.fromEntries(sortedEntries)
   }
 
@@ -55,7 +56,7 @@ const App = () => {
           element={
             <div>
               <ConcertForm />
-              <ConcertProjection concerts={concerts}/>
+              <SongProjections concerts={concerts}/>
             </div>
           }
         />
