@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './songTracker.styles.css';
 
 const SongTracker = ({ songCount }) => {
+  console.log(songCount)
   const [selectedSong, setSelectedSong] = useState(null);
 
   const handleSongClick = (song) => {
@@ -17,21 +18,19 @@ const SongTracker = ({ songCount }) => {
     // Handle date click if needed
   };
 
-  console.log(songCount)
-
   return (
     <div>
       <h1>Songs</h1>
-      {Object.entries(songCount).map(([song, dates]) => (
-        <div key={song}>
-          <h3 onClick={() => handleSongClick(song)}>
-            {song} ({dates.length})
+      {songCount.map((song) => (
+        <div key={song.song}>
+          <h3 onClick={() => handleSongClick(song.song)}>
+            {song.song} ({song.concerts.length})
           </h3>
-          {selectedSong === song && (
-            <ul>
-              {dates.map((date, index) => (
+          {selectedSong === song.song && (
+            <ul className='song-tracker-container'>
+              {song.concerts.map((concert, index) => (
                 <li key={index} onClick={handleDateClick}>
-                  {date}
+                  {concert}
                 </li>
               ))}
             </ul>
@@ -43,3 +42,4 @@ const SongTracker = ({ songCount }) => {
 };
 
 export default SongTracker;
+
