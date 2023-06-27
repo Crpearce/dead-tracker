@@ -9,7 +9,11 @@ const Navigation = () => {
     <nav className='nav-container'>
       <img src={banner} style={{ width: '55%' }} />
       <div className='nav-links-container'>
-        <Link to='/' style={{ textDecoration: 'none', color: '#171515' }}>
+        <Link
+          to='/'
+          style={{ textDecoration: 'none', color: '#171515' }}
+          className='link'
+        >
           Home
         </Link>
         <Link
@@ -19,8 +23,12 @@ const Navigation = () => {
         >
           Song Count
         </Link>
-        <Link to='/due-up' style={{ textDecoration: 'none', color: '#171515' }}>
-          In the Mix
+        <Link
+          to='/due-up'
+          style={{ textDecoration: 'none', color: '#171515' }}
+          className='link'
+        >
+          Due Next
         </Link>
       </div>
     </nav>
