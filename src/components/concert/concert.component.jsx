@@ -4,6 +4,7 @@ import { concerts } from '../../data'
 
 const Concert = ({ selectedShows }) => {
   const findSets = concerts.filter((show) => show.venue === selectedShows[0])
+  console.log(findSets)
 
   return (
     <div className='concert-container'>
@@ -21,6 +22,7 @@ const Concert = ({ selectedShows }) => {
             <h2>
               {selectedShows} - {set.date}
             </h2>
+            <img src={set.poster} className='concert-poster'/>
             <div className='sets-container'>
               <div
                 className='set1-wrapper'

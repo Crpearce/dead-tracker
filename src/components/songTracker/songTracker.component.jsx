@@ -25,13 +25,13 @@ const SongTracker = ({ songCount }) => {
       <h1>Songs</h1>
       {filteredSongCount.map((song) => (
         <div key={song.song}>
-          <h3 onClick={() => handleSongClick(song.song)}>
+          <h3 onClick={() => handleSongClick(song.song)} className='song-count'>
             {song.song} ({song.concerts.length})
           </h3>
           {selectedSong === song.song && (
             <ul className='song-tracker-container'>
               {song.concerts.map((concert, index) => (
-                <li key={index} onClick={handleDateClick}>
+                <li key={index} onClick={handleDateClick} className='song-count'>
                   {concert}
                 </li>
               ))}

@@ -10,9 +10,9 @@
     padding-top: 3vh;
     padding-bottom: 2vh;
     border-bottom: 5px solid black;
+    font-weight: bold;
 }
 
 .link {
     padding-left: 4vw;
-    /* font-size: 2.65vw; */
 }

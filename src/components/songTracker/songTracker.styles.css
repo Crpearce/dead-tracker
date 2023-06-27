@@ -4,3 +4,8 @@
     margin: 0;
     padding: 0;
 }
+
+.song-count {
+    font-family: 'Rye', cursive;
+    font-weight: 100;
+}
