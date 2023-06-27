@@ -7,6 +7,8 @@ import './concertForm.styles.css'
 
 import { cities } from '../../data'
 
+import logo from '../../assets/dead.png'
+
 const ConcertForm = () => {
   const [allConcerts] = useState(cities)
   const [concertCity, setConcertCity] = useState('')
@@ -43,6 +45,10 @@ const ConcertForm = () => {
         
       </div>
       {selectedShow && <Concert selectedShows={[selectedShow]} />}
+      <div className='placeholder-container'>
+
+        {!selectedShow && <img src={logo} className='placeholder'/> }
+      </div>
     </>
   )
 }

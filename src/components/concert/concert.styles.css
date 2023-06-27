@@ -20,6 +20,7 @@
     justify-content: space-around;
     margin:10px;
     border-radius: 5px;
+    background-color: #b6bee0;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;  }
   
   .set2-wrapper {
@@ -27,14 +28,17 @@
     justify-content: space-around;
     margin:10px;
     border-radius: 5px;
+    background-color: #ffd1d0;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   }
-  
   .set1-container,
   .set2-container {
     list-style-type: decimal;
     margin: 10px;
     width: 45%;
+    border-radius: 5px;
+    text-align: left;
+    list-style-position: inside;
   }
   
   .set-header {
@@ -43,6 +47,7 @@
     justify-content: center;
     margin: 0;
     color: #171515;
+    font-family: 'Shrikhand', cursive;
   }
 
   .set1-container li,
@@ -51,11 +56,7 @@
       font-size: 1em;
     }
 
-  .set1-container,
-  .set2-container {
-      border-radius: 5px;
-      text-align: left;
-      list-style-position: inside;
-  }
+
+ 
     
 

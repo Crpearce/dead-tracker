@@ -17,10 +17,10 @@ const SongProjections = ({ concerts, songs }) => {
 
   return (
     <div>
-      <h2>Potential Upcoming Songs</h2>
+      <h2 className='potential-header'>Potential Upcoming Songs</h2>
       <ul className='potential-songs-container'>
         {potentialSongs.map(song => (
-          <li key={song.song}>{song.song} ({song.concerts.length})</li>
+          <li key={song.song} className='potential-song'>{song.song} ({song.concerts.length})</li>
         ))}
       </ul>
     </div>
