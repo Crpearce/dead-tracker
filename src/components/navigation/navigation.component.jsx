@@ -7,7 +7,7 @@ import './navigation.styles.css'
 const Navigation = () => {
   return (
     <nav className='nav-container'>
-      <img src={banner} style={{ width: '55%' }} />
+      <img src={banner} style={{ width: '55%' }} alt='banner'/>
       <div className='nav-links-container'>
         <Link
           to='/'

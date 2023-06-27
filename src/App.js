@@ -6,7 +6,6 @@ import SongTracker from './components/songTracker/songTracker.component';
 import SongProjections from './components/songProjections/songProjections.component';
 
 import { concerts } from '../src/data';
-import Concert from './components/concert/concert.component';
 
 const App = () => {
   const songCount = concerts.reduce((acc, concert) => {

@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import Concert from '../concert/concert.component'
-
-import './concertForm.styles.css'
 
 import { cities } from '../../data'
 
 import logo from '../../assets/dead.png'
+
+import './concertForm.styles.css'
 
 const ConcertForm = () => {
   const [allConcerts] = useState(cities)
@@ -47,7 +46,7 @@ const ConcertForm = () => {
       {selectedShow && <Concert selectedShows={[selectedShow]} />}
       <div className='placeholder-container'>
 
-        {!selectedShow && <img src={logo} className='placeholder'/> }
+        {!selectedShow && <img src={logo} className='placeholder' alt='steal your face'/> }
       </div>
     </>
   )

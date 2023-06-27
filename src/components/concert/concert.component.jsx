@@ -22,7 +22,7 @@ const Concert = ({ selectedShows }) => {
             <h2>
               {selectedShows} - {set.date}
             </h2>
-            <img src={set.poster} className='concert-poster'/>
+            <img src={set.poster} className='concert-poster' alt='concert-poster'/>
             <div className='sets-container'>
               <div
                 className='set1-wrapper'
