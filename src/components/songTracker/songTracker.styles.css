@@ -5,7 +5,13 @@
     padding: 0;
 }
 
-.song-count {
+song-count {
     font-family: 'Rye', cursive;
+
+}
+li {
+    font-family: 'Shrikhand', cursive;
     font-weight: 100;
+    letter-spacing: .1vw;
+    color:#0C2999
 }

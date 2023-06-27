@@ -19,7 +19,7 @@ const Concert = ({ selectedShows }) => {
               border: `3px solid ${borderColor}`,
             }}
           >
-            <h2>
+            <h2 className='show-date-header'>
               {selectedShows} - {set.date}
             </h2>
             <img src={set.poster} className='concert-poster' alt='concert-poster'/>
