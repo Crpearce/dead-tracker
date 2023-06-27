@@ -12,7 +12,10 @@ const Navigation = () => {
       <Link to='/' style={{textDecoration: 'none', color: '#171515'}}>Home
       </Link>
         <Link to='/song-tracker' style={{textDecoration: 'none', color: '#171515'}}>
-          Song Tracker
+          Song Count
+        </Link>
+        <Link to='/due-up' style={{textDecoration: 'none', color: '#171515'}}>
+          In the Mix
         </Link>
       </div>
     </nav>

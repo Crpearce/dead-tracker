@@ -6,7 +6,7 @@
   }
   
   .concert-card {
-    width: 50vw;
+    width: 80%;
     margin-top: 20px;
     margin-bottom: 5vh;
     padding: 5px;
@@ -44,29 +44,18 @@
     margin: 0;
     color: #171515;
   }
-  
+
   .set1-container li,
   .set2-container li {
-      color: white;
+      padding: 5px 0px;
+      font-size: 1em;
     }
 
-    .set1-container li {
-        padding: 5px 0px;
-    }
-
-    .set2-container li {
-        padding: 5px 35px 10px 15px;
-    }
-    
-    .set1-container {
-        border-radius: 5px;
-        background-color: #0c2999;
-    }
-    
-    .set2-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border-radius: 5px;
-        background-color: #ff1c14;
+  .set1-container,
+  .set2-container {
+      border-radius: 5px;
+      text-align: left;
+      list-style-position: inside;
   }
-  
+    
+

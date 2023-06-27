@@ -6,6 +6,7 @@ import SongTracker from './components/songTracker/songTracker.component';
 import SongProjections from './components/songProjections/songProjections.component';
 
 import { concerts } from '../src/data';
+import Concert from './components/concert/concert.component';
 
 const App = () => {
   const songCount = concerts.reduce((acc, concert) => {
@@ -60,8 +61,6 @@ const App = () => {
 
   const sortedSongCount = sortKeyValuesBySong(songCount);
 
-  console.log(sortedSongCount);
-
   return (
     <Router>
       <Navigation />
@@ -71,11 +70,11 @@ const App = () => {
           element={
             <div>
               <ConcertForm />
-              <SongProjections concerts={concerts} songs={sortedSongCount} />
             </div>
           }
         />
         <Route path="/song-tracker" element={<SongTracker songCount={sortedSongCount} />} />
+        <Route path="/due-up" element={<SongProjections concerts={concerts} songs={sortedSongCount} />} />
       </Routes>
     </Router>
   );

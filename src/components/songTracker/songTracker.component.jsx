@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './songTracker.styles.css';
 
 const SongTracker = ({ songCount }) => {
-  console.log(songCount)
   const [selectedSong, setSelectedSong] = useState(null);
 
   const handleSongClick = (song) => {
@@ -18,10 +17,13 @@ const SongTracker = ({ songCount }) => {
     // Handle date click if needed
   };
 
+  // Filter out "Drums" and "Space" from the songCount array
+  const filteredSongCount = songCount.filter((song) => song.song !== 'Drums' && song.song !== 'Space');
+
   return (
     <div>
       <h1>Songs</h1>
-      {songCount.map((song) => (
+      {filteredSongCount.map((song) => (
         <div key={song.song}>
           <h3 onClick={() => handleSongClick(song.song)}>
             {song.song} ({song.concerts.length})

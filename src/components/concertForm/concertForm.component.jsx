@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import Concert from '../concert/concert.component'
 
@@ -13,6 +14,11 @@ const ConcertForm = () => {
 
   const displayShow = () => {
     setSelectedShow(concertCity)
+  }
+
+  const resetShow = () => {
+    setConcertCity(`-- Select a City --`)
+    setSelectedShow('')
   }
 
   return (
@@ -30,7 +36,11 @@ const ConcertForm = () => {
             </option>
           ))}
         </select>
+        
         <button onClick={displayShow}>View Show</button>
+        <button onClick={resetShow}>Reset</button>
+
+        
       </div>
       {selectedShow && <Concert selectedShows={[selectedShow]} />}
     </>
