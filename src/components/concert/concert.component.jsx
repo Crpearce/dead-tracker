@@ -33,7 +33,7 @@ const Concert = ({ selectedShows }) => {
                 <h3 className='set-header'>Set 1</h3>
                 <ul className='set1-container'>
                   {set.set1.map((song, songIndex) => (
-                    <li key={songIndex}>{song}</li>
+                    <li key={songIndex} className='set-song'>{song}</li>
                   ))}
                 </ul>
               </div>
@@ -46,7 +46,7 @@ const Concert = ({ selectedShows }) => {
                 <h3 className='set-header'>Set 2</h3>
                 <ul className='set2-container'>
                   {set.set2.map((song, songIndex) => (
-                    <li key={songIndex}>{song}</li>
+                    <li key={songIndex} className='set-song'>{song}</li>
                   ))}
                 </ul>
               </div>
