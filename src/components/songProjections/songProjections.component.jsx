@@ -3,7 +3,7 @@ import './songProjections.styles.css'
 
 const SongProjections = ({ concerts, songs }) => {
   // Get the IDs of the 4 most recent concerts
-  const recentConcerts = concerts.slice(-3);
+  const recentConcerts = concerts.slice(-4);
 
   // Get all the songs played in the recent concerts
   const playedSongs = recentConcerts.flatMap(concert => [

@@ -630,7 +630,7 @@ export const concerts = [
       'Bertha', 'Good Lovin', 'It Must Have Been the Roses', 'Big River', 'Dark Star On The Big River Jam', 'Next Time You See Me', 'Mississippi 1/2 Step', 'Bird Song', 'Dont Ease Me In'
     ],
     set2: [
-      'Iko, Iko', 'Sugaree', 'China Cat Sunflower', 'I Know You Rider', 'Uncle Johns Band', 'Drums', 'Space','Hell in a Bucket', 'Wharf Rat', 'Turn On Your Lovelight'
+      'Iko, Iko', 'Sugaree', 'China Cat Sunflower', 'I Know You Rider', 'Uncle Johns Band', 'Drums', 'Space','Hell in a Bucket', 'Wharf Rat', 'Turn On Your Lovelight', 'Touch of Grey'
     ],
     encore: ['None'],
     region: 'Midwest',
