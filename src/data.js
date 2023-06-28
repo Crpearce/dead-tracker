@@ -18,6 +18,8 @@ import PA2 from '../src/assets/PA2.png'
 import PHX1 from '../src/assets/PHX1.png'
 import TX1 from '../src/assets/TX1.png'
 import VA1 from '../src/assets/VA1.png'
+import IN1 from '../src/assets/IN1.png'
+
 
 export const concerts = [
   {
@@ -618,6 +620,20 @@ export const concerts = [
     ],
     encore: ['The Weight', 'Ripple'],
     region: 'Northeast',
+  },
+  {
+    id: 20,
+    venue: 'Noblesville, IN',
+    date: '06/27/23',
+    poster: `${IN1}`,
+    set1: [
+      'Bertha', 'Good Lovin', 'It Must Have Been the Roses', 'Big River', 'Dark Star On The Big River Jam', 'Next Time You See Me', 'Mississippi 1/2 Step', 'Bird Song', 'Dont Ease Me In'
+    ],
+    set2: [
+      'Iko, Iko', 'Sugaree', 'China Cat Sunflower', 'I Know You Rider', 'Uncle Johns Band', 'Drums', 'Space'
+    ],
+    encore: ['None'],
+    region: 'Midwest',
   },
   // {id: 15, venue: 'Noblesville, IN'},
   // {id: 16, venue: 'Boulder, CO'},
