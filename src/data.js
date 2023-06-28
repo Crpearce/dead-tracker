@@ -630,9 +630,9 @@ export const concerts = [
       'Bertha', 'Good Lovin', 'It Must Have Been the Roses', 'Big River', 'Dark Star On The Big River Jam', 'Next Time You See Me', 'Mississippi 1/2 Step', 'Bird Song', 'Dont Ease Me In'
     ],
     set2: [
-      'Iko, Iko', 'Sugaree', 'China Cat Sunflower', 'I Know You Rider', 'Uncle Johns Band', 'Drums', 'Space','Hell in a Bucket', 'Wharf Rat', 'Turn On Your Lovelight', 'Touch of Grey'
+      'Iko, Iko', 'Sugaree', 'China Cat Sunflower', 'I Know You Rider', 'Uncle Johns Band', 'Drums', 'Space','Hell in a Bucket', 'Wharf Rat', 'Turn On Your Lovelight'
     ],
-    encore: ['None'],
+    encore: ['Touch of Grey'],
     region: 'Midwest',
   },
   // {id: 15, venue: 'Noblesville, IN'},
