@@ -22,7 +22,7 @@ const SongTracker = ({ songCount }) => {
 
   return (
     <div>
-      <h1>Songs</h1>
+      <h1>Songs ({songCount.length + 2})</h1>
       {filteredSongCount.map((song) => (
         <div key={song.song}>
           <h3 onClick={() => handleSongClick(song.song)} className='song-count'>
